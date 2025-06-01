@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "b97dbbd8-8c97-4b91-a1ca-7ea2df88d66c",
+		"name": "Customer Labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30550304",
+		"_collection_link": "https://gold-shuttle-720305.postman.co/workspace/SRV~de330c07-24a7-4fe4-b702-466b9693fb86/collection/30550304-b97dbbd8-8c97-4b91-a1ca-7ea2df88d66c?action=share&source=collection_link&creator=30550304"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Account 2\",\r\n    \"email\": \"account2@gmail.com\",\r\n    \"website\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/account",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Test Name\",\r\n    \"email\": \"test3@gmail.com\",\r\n    \"website\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/account",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/account?page&limit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/account/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/account/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destination",
+			"item": [
+				{
+					"name": "Create Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"http://localhost:3000/account\",\r\n    \"httpMethod\": \"GET\",\r\n    \"accountId\": 1,\r\n    \"headers\": {\r\n        \"APP_SECRET\": \"test secret\",\r\n        \"ACTION\": \"user.update\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Destination",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"url\": \"http://localhost:3000/test\",\r\n    \"httpMethod\": \"POST\",\r\n    \"accountId\": 1,\r\n    \"headers\": {\r\n        \"APP_ID\": \"1234567\",\r\n        \"APP_SECRET\": \"sasa\",\r\n        \"ACTION\": \"user.update\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Destinations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination?page&limit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Destinations By Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination/by-account?page&limit&accountId=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination",
+								"by-account"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "limit",
+									"value": null
+								},
+								{
+									"key": "accountId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Destination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Destination",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/destination/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Webhook",
+			"item": [
+				{
+					"name": "Wehbook API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "CL-X-TOKEN",
+								"value": "b504e7bfad7236d9768e5ffd914ee1befc8a99f5b6b60e0b84c1c12f4ffe9a21",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/server/incoming_data",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"server",
+								"incoming_data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
