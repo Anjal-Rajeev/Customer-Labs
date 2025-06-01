@@ -1,3 +1,6 @@
+// API - GET - /destination/by-account
+// Query Params - accountId
+
 export const getDesignationsByAccount = asyncErrorHandler(async (req) => {
   let { skip, limit } = paginationValues(req.query)
   let { accountId } = req.query

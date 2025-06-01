@@ -1,3 +1,18 @@
+// API - PUT - /destination/:id
+// Body - {
+//     "id": 1,
+//     "url": "http://localhost:3000/test",
+//     "httpMethod": "POST",
+//     "accountId": 1,
+//     "headers": {
+//         "APP_ID": "1234567",
+//         "APP_SECRET": "sasa",
+//         "ACTION": "user.update",
+//         "Content-Type": "application/json",
+//         "Accept": "*"
+//     }
+// }
+
 export const updateDestination = asyncErrorHandler(async (req) => {
   const { id, accountId, url, httpMethod, headers } = req.body;
 

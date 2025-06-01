@@ -1,3 +1,17 @@
+// API - POST - /destination 
+// body - {
+//     "url": "http://localhost:3000/account",
+//     "httpMethod": "GET",
+//     "accountId": 1,
+//     "headers": {
+//         "APP_SECRET": "test secret",
+//         "ACTION": "user.update",
+//         "Content-Type": "application/json",
+//         "Accept": "*"
+//     }
+// }
+
+
 export const createDestination = asyncErrorHandler(async (req) => {
   const { accountId, url, httpMethod, headers } = req.body;
 

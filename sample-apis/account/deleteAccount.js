@@ -1,3 +1,6 @@
+// API - DELETE - /account/:id
+// Params - id
+
 export const deleteAccount = asyncErrorHandler(async (req) => {
   const { id } = req.params;
 

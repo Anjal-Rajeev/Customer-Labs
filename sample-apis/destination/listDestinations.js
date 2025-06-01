@@ -1,3 +1,6 @@
+// API - GET - /destination
+
+
 export const listDestinations = asyncErrorHandler(async (req) => {
   let { skip, limit } = paginationValues(req.query)
 

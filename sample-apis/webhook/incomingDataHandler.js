@@ -1,3 +1,7 @@
+// API - POST - /server/incoming_data
+// Header - CL-X-TOKEN
+// Body - JSON
+
 export const incomingDataHandler = asyncErrorHandler(async (req, res) => {
   // Only accept POST requests with JSON
   if (req.method !== 'POST' || req.headers['content-type'] !== 'application/json') {

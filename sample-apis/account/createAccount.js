@@ -1,3 +1,11 @@
+// API - POST - /account 
+// body - {
+//     "name": "Account 2",
+//     "email": "account2@gmail.com",
+//     "website": "test"
+// }
+
+
 export const createAccount = asyncErrorHandler(async (req) => {
   const { email, name, website } = req.body;
   const { error } = AccountBodyValidation(req.body);

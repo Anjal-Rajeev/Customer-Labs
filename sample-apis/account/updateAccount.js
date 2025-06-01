@@ -1,3 +1,12 @@
+// API - PUT - /account 
+// body - {
+//     "id": 3,
+//     "name": "Test Name",
+//     "email": "test3@gmail.com",
+//     "website": "test"
+// }
+
+
 export const updateAccount = asyncErrorHandler(async (req) => {
   const { id, email, name, website } = req.body;
   const { error } = AccountBodyValidation(req.body);

@@ -1,3 +1,6 @@
+// API - DELETE - /destination/:id
+// Params - id
+
 export const deleteDestination = asyncErrorHandler(async (req) => {
   const { id } = req.params;
 
