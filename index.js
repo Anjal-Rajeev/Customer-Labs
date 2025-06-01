@@ -3,7 +3,6 @@ import chalk from "chalk"
 import cors from "cors";
 import logger from "morgan"
 import cookieParser from "cookie-parser";
-import "dotenv/config";
 import { PORT } from "./config.js";
 
 import sequelize from "./database/index.js";
