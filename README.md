@@ -1,8 +1,9 @@
 # Customer-Labs
 
+```bash
 git clone https://github.com/Anjal-Rajeev/Customer-Labs.git
 cd Customer-Labs
 npm install
 npm start
 
-⚠️ Postman colletion to test APIs are added in this repo.
+⚠️ Postman collection to test APIs is added in this repo.
